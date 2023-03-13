@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.example.kotlinfirstproject.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/navigateToSecondFragment"
+            app:destination="@id/secondkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondkFragment"
+        android:name="com.example.kotlinfirstproject.SecondkFragment"
+        android:label="fragment_secondk"
+        tools:layout="@layout/fragment_secondk" >
+        <action
+            android:id="@+id/navigateToFirstFragment"
+            app:destination="@id/firstFragment" />
+        <argument
+            android:name="number"
+            app:argType="integer"
+            android:defaultValue="2" />
+    </fragment>
+</navigation>
